@@ -5,4 +5,4 @@ resources:
 - ../argo-events
 - ../argo-workflows
 - ../argo-workflows-examples
-- ../external-secrets-operator
+- ../external-secrets-operator/overlays/local
