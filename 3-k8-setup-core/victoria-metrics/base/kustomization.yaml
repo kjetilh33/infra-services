@@ -5,7 +5,6 @@ namespace: victoria-metrics
 
 resources:
 - github.com/VictoriaMetrics/operator/config/default?ref=v0.35.1
-- vmsingle.yaml
 - vmagent.yaml
 - mappings.yaml
 - pushgateway.yaml

@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
 - ../../base 
-- argocd-project.yaml
+- argocd-dev-services.project.yaml
 - argocd-dev-services-applicationset.yaml
