@@ -8,8 +8,8 @@ spec:
       repoURL: https://github.com/kjetilh33/infra-services.git
       revision: HEAD
       directories:
-      - path: 3-k8-setup-core/*/overlays/dev
-      - path: 4-k8-setup-extended/*/overlays/dev
+      - path: 3-k8-setup-core/*/overlays/local
+      - path: 4-k8-setup-extended/*/overlays/local
   template:
     metadata:
       name: '{{path.basenameNormalized}}'
