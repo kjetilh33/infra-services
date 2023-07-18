@@ -5,11 +5,11 @@ metadata:
 spec:
   image: 
     tag: "v1.91.3"
-  retentionPeriod: "15w"
+  retentionPeriod: "2w"
   removePvcAfterDelete: true
   storage:
     accessModes:
       - ReadWriteOnce
     resources:
       requests:
-        storage: 5Gi 
+        storage: 1Gi 
