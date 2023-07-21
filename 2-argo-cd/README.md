@@ -79,7 +79,7 @@ The first item, is to set a new password for the admin account. Argo is installe
 
 Get the `base64` encoded default password.
 ```console
-$ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
 ```
 which you can then decode using for example [https://www.base64decode.org](https://www.base64decode.org)
 
@@ -87,7 +87,7 @@ Login to [http://argocd.localhost](http://argocd.localhost) with your browser, u
 
 > In case you are unable to access ArgoCD on [http://argocd.localhost](http://argocd.localhost), we can temporarily port-forward the UI via `kubectl`. The following command will enable a temporary port forward of the UI to `http://localhost:8080`.
 >```console
->$ kubectl port-forward svc/argocd-server -n argocd 8080:443
+>kubectl port-forward svc/argocd-server -n argocd 8080:443
 >```
 
 Now ArgoCD is installed along with the development services. 
