@@ -12,7 +12,7 @@ spec:
       - path: 4-k8-setup-extended/*/overlays/dev
   template:
     metadata:
-      name: '{{path.basenameNormalized}}'
+      name: '{{path[1]}}'
     spec:
       project: dev-services
       source:
