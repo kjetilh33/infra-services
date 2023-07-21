@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../argo-events
-- ../argo-workflows
-- ../argo-workflows-examples
-- ../external-secrets-operator/overlays/local
+- ../argo-events/overlays/local
+- ../argo-workflows/overlays/local
+- ../argo-workflows-examples/overlays/local

@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: argo
 resources:
 - argo-namespace.yaml
-- argo-mapping.yaml 
+- argo-wf-server-ui.mapping.yaml 
 - https://raw.githubusercontent.com/argoproj/argo-workflows/master/manifests/quick-start-postgres.yaml 
 - minio-storage-class.yaml 
 patchesStrategicMerge:
