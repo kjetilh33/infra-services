@@ -26,18 +26,3 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: prometheus-pushgateway
-  labels:
-    app.kubernetes.io/name: prometheus-pushgateway
-spec:
-  selector:
-    app.kubernetes.io/name: prometheus-pushgateway
-  ports:
-    - name: metrics
-      protocol: TCP
-      port: 9091
-      targetPort: 9091
