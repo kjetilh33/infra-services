@@ -6,7 +6,7 @@ metadata:
 spec:
   hostname: argocd.localhost:443
   prefix: /
-  service: argocd-server:80
+  service: argocd-server:443
   regex_headers:
     Content-Type: "^application/grpc.*$"
   grpc: true
