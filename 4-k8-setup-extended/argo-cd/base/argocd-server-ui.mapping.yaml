@@ -6,4 +6,4 @@ metadata:
 spec:
   hostname: argocd.localhost
   prefix: /
-  service: argocd-server:443
+  service: argocd-server.argocd:443
