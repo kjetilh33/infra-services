@@ -3,7 +3,6 @@ kind: Kustomization
 
 namespace: argocd
 resources:
-- ../../2-argo-cd
-- argocd-server-ui.mapping.yaml
+- argocd-server-ui.mapping.yaml 
 # Disable CLI mapping as it conflicts with the server UI mapping
 # - argocd-server-cli.mapping.yaml 
