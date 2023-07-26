@@ -1,0 +1,6 @@
+# Specify server auth (i.e. open UI access)
+- op: replace
+  path: /spec/template/spec/containers/0/args
+  value:
+  - "server"
+  - "--auth-mode=server"

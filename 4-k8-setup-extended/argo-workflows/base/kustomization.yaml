@@ -6,8 +6,13 @@ namespace: argo
 resources:
 - argo.namespace.yaml
 - argo-wf-server-ui.mapping.yaml 
-- https://raw.githubusercontent.com/argoproj/argo-workflows/master/manifests/quick-start-postgres.yaml 
-- minio-storage-class.yaml 
+- https://github.com/argoproj/argo-workflows/releases/download/v3.4.9/install.yaml
+# - minio-storage-class.yaml 
 
 patches:
-- argo-overrides.yaml
+- path: argo-wf-overrides.yaml  
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: argo-server
