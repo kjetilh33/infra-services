@@ -1,7 +1,7 @@
 apiVersion: getambassador.io/v3alpha1
 kind: Mapping
 metadata:
-  name: prometheus-pushgateway
+  name: prometheus-pushgateway-ui-localhost
 spec:
   hostname: 'pushgateway.localhost'
   prefix: /

@@ -1,7 +1,7 @@
 apiVersion: getambassador.io/v3alpha1
 kind: Mapping
 metadata:
-  name: argocd-server-ui
+  name: argocd-server-ui-localhost
   namespace: argocd
 spec:
   hostname: argocd.localhost
