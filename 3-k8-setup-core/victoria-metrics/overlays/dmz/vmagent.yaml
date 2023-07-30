@@ -8,4 +8,4 @@ spec:
   selectAllByDefault: true
   replicaCount: 1
   remoteWrite:
-    - url: "http://victoria-metrics.kinnovatio.local:8429/api/v1/write"  # Replace with the URL of your central Victoria Metrics service
+    - url: "http://victoria-metrics.kinnovatio.local/api/v1/write"  # Replace with the URL of your central Victoria Metrics service
