@@ -5,4 +5,4 @@ metadata:
 spec:
   hostname: 'victoria-metrics.localhost'
   prefix: /
-  service: http://vmsingle-vmsingle:8429
+  service: http://vmsingle-dev:8429
