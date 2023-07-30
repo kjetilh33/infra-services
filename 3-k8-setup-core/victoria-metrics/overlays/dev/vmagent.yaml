@@ -8,4 +8,4 @@ spec:
   selectAllByDefault: true
   replicaCount: 1
   remoteWrite:
-    - url: "http://vmsingle-vmsingle.victoria-metrics:8429/api/v1/write"
+    - url: "http://vmsingle-dev.victoria-metrics:8429/api/v1/write"
