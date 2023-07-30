@@ -1,7 +1,7 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:
-  name: victoria-metrics
+  name: vm-operator
   labels:
     app.kubernetes.io/name: grafana-main
 spec:
@@ -9,6 +9,6 @@ spec:
     matchLabels:
       dashboards: "grafana"
   grafanaCom:
-    id: 10229
-    revision: 29
+    id: 17869
+    revision: 1
   json: ""

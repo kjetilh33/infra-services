@@ -1,10 +1,10 @@
 apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMAgent
 metadata:
-  name: vmagent
+  name: dev
 spec:
   image: 
-    tag: "v1.91.3"
+    tag: "v1.92.1"
   selectAllByDefault: true
   replicaCount: 1
   remoteWrite:
