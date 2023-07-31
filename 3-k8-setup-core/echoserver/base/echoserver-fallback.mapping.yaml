@@ -1,0 +1,7 @@
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: fall-back
+spec:
+  prefix: /
+  service: http://echoserver.echoserver:8080

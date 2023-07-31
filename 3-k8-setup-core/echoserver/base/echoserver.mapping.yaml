@@ -5,4 +5,4 @@ metadata:
 spec:
   hostname: 'echoserver.localhost'
   prefix: /
-  service: http://echoserver:8080
+  service: http://echoserver.echoserver:8080
