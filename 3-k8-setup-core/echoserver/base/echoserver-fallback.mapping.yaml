@@ -3,5 +3,6 @@ kind: Mapping
 metadata:
   name: fall-back
 spec:
+  host: "*"
   prefix: /
   service: http://echoserver.echoserver:8080
