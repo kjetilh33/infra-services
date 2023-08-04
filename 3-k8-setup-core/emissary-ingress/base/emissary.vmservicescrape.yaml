@@ -1,7 +1,7 @@
 apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMServiceScrape
 metadata:
-  name: emissary
+  name: emissary-ingress
   namespace: emissary
 spec:
   endpoints:
@@ -10,9 +10,9 @@ spec:
       scrape_interval: 30s
   selector:
     matchLabels:
-      app.kubernetes.io/instance: emissary-apiext
-      app.kubernetes.io/name: emissary-apiext
-      app.kubernetes.io/part-of: emissary-apiext
+      app.kubernetes.io/name: emissary-ingress
+      app.kubernetes.io/part-of: emissary-ingress
+      service: ambassador-admin
   namespaceSelector:
     matchNames:
       - emissary
