@@ -7,5 +7,7 @@ spec:
     tag: "v1.92.1"
   selectAllByDefault: true
   replicaCount: 1
+  externalLabels:
+    clusterId: "dev"
   remoteWrite:
     - url: "http://vmsingle-vmsingle.victoria-metrics:8429/api/v1/write"

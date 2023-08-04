@@ -7,5 +7,7 @@ spec:
     tag: "v1.92.1"
   selectAllByDefault: true
   replicaCount: 1
+  externalLabels:
+    clusterId: "dmz"
   remoteWrite:
     - url: "http://victoria-metrics.kinnovatio.local/api/v1/write"  # Replace with the URL of your central Victoria Metrics service
