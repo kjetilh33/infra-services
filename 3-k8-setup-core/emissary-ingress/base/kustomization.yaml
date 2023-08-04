@@ -8,7 +8,6 @@ resources:
 - localhost-all.host.yaml
 - http.listener.yaml
 - emissary.vmservicescrape.yaml
-- emissary-ingress.grafanadashboard.yaml 
 
 replicas:
   - name: emissary-apiext

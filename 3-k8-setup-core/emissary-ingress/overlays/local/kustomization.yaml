@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - ../../base 
+- emissary-ingress.grafanadashboard.yaml 
