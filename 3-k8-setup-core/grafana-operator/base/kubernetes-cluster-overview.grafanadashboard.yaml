@@ -12,6 +12,4 @@ spec:
     - datasourceName: Prometheus
       inputName: "PBFA97CFB590B2093"
   grafanaCom:
-    id: 18629
-    revision: 3
-  json: ""
+    id: 18629 

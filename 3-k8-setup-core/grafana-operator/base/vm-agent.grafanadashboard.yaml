@@ -9,6 +9,4 @@ spec:
     matchLabels:
       dashboards: "grafana"
   grafanaCom:
-    id: 12683
-    revision: 11
-  json: ""
+    id: 12683 

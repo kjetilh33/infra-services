@@ -12,6 +12,4 @@ spec:
     - datasourceName: Prometheus
       inputName: "DS_PROMETHEUS"
   grafanaCom:
-    id: 10000
-    revision: 1
-  json: ""
+    id: 10000 
