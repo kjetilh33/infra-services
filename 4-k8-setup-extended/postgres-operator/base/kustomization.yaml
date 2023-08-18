@@ -4,5 +4,5 @@ namespace: postgres-operator
 
 resources:
 - postgres-operator.namespace.yaml 
-- https://raw.githubusercontent.com/zalando/postgres-operator/master/manifests/operatorconfigurator.crd.yaml
+- https://raw.githubusercontent.com/zalando/postgres-operator/master/manifests/operatorconfiguration.crd.yaml
 - default-values.operatorconfiguration.yaml
