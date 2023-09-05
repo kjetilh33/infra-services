@@ -4,7 +4,7 @@ metadata:
   name: vmsingle
 spec:
   image: 
-    tag: "v1.93.0"
+    tag: "v1.93.3"
   retentionPeriod: "2w"
   removePvcAfterDelete: true
   storage:

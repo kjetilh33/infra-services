@@ -4,7 +4,7 @@ metadata:
   name: dev
 spec:
   image: 
-    tag: "v1.93.0"
+    tag: "v1.93.3"
   retentionPeriod: "15w"
   removePvcAfterDelete: true
   storage:
