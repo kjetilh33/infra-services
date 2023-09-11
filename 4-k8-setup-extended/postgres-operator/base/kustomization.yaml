@@ -6,3 +6,6 @@ resources:
 - postgres-operator.namespace.yaml 
 - https://raw.githubusercontent.com/zalando/postgres-operator/master/manifests/operatorconfiguration.crd.yaml
 - default-values.operatorconfiguration.yaml
+- https://raw.githubusercontent.com/zalando/postgres-operator/master/manifests/operator-service-account-rbac.yaml
+- postgres-opeartor.deployment.yaml 
+# - https://raw.githubusercontent.com/zalando/postgres-operator/master/manifests/api-service.yaml
