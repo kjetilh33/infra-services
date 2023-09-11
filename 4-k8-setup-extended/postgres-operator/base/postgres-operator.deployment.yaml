@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: postgres-operator
   labels:
-  application: postgres-operator
+    application: postgres-operator
 spec:
   replicas: 1
   strategy:
