@@ -15,3 +15,5 @@ resources:
 images:
 - name: victoriametrics/operator
   newTag: v0.41.2
+- name: prom/pushgateway
+  newTag: v1.7.0
