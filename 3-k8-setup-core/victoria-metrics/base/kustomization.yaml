@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: victoria-metrics
 
 resources:
-- github.com/VictoriaMetrics/operator/config/default?ref=v0.42.3
+- github.com/VictoriaMetrics/operator/config/default?ref=v0.42.4
 - pushgateway.mapping.yaml
 - pushgateway.deployment.yaml
 - pushgateway.service.yaml
@@ -14,6 +14,6 @@ resources:
 
 images:
 - name: victoriametrics/operator
-  newTag: v0.42.3
+  newTag: v0.42.4
 - name: prom/pushgateway
   newTag: v1.7.0
