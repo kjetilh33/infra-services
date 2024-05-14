@@ -7,3 +7,4 @@ data:
   ## Server properties
   # Run server without TLS
   server.insecure: "true"
+  controller.diff.server.side: "true"
