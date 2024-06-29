@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: argo-events
 resources:
 - argo-events-namespace.yaml  
-- https://raw.githubusercontent.com/argoproj/argo-events/releases/download/v1.9.3/install.yaml 
-- https://raw.githubusercontent.com/argoproj/argo-events/releases/download/v1.9.3/install-validating-webhook.yaml 
+- https://raw.githubusercontent.com/argoproj/argo-events/releases/download/v1.9.2/install.yaml 
+- https://raw.githubusercontent.com/argoproj/argo-events/releases/download/v1.9.2/install-validating-webhook.yaml 
 - https://raw.githubusercontent.com/argoproj/argo-events/stable/examples/eventbus/native.yaml 
