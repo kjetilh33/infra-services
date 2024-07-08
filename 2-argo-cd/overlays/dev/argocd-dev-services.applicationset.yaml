@@ -28,5 +28,6 @@ spec:
           allowEmpty: true
         syncOptions:
           - "applyOutOfSyncOnly=false"
-          - "PrunePropagationPolicy=foreground"
+          - "PrunePropagationPolicy=background"
+          - "PruneLast=true"
           - "ServerSideApply=true"
