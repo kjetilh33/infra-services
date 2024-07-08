@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: victoria-metrics
 
 resources:
-#- ../../base 
-#- vmsingle.yaml
-#- vmagent.yaml
-# - vmsingle.mapping.yaml
+- ../../base 
+- vmsingle.yaml
+- vmagent.yaml
+ - vmsingle.mapping.yaml
