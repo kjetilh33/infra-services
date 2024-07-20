@@ -1,0 +1,10 @@
+# Potential global module settings
+apiVersion: getambassador.io/v3alpha1
+kind: Module
+metadata:
+  name: ambassador
+  namespace: emissary
+spec:
+  config:
+    
+  
