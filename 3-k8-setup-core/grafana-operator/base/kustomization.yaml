@@ -16,5 +16,7 @@ resources:
 - kubernetes-cluster-overview.grafanadashboard.yaml
 
 images:
-- name: ghcr.io/grafana-operator/grafana-operator
-  newTag: v5.12.0
+  - name: ghcr.io/grafana-operator/grafana-operator
+    newTag: v5.12.0
+  - name: grafana/grafana
+    newTag: v11.1.4
