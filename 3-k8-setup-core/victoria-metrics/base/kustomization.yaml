@@ -13,7 +13,8 @@ resources:
 - node-scrape.vmnodescrape.yaml
 
 images:
-- name: victoriametrics/operator
+- name: manager
+  newName: victoriametrics/operator
   newTag: v0.53.0
 - name: prom/pushgateway
   newTag: v1.11.0
