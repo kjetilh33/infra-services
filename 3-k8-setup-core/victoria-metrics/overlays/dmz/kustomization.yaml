@@ -3,6 +3,6 @@ kind: Kustomization
 
 namespace: victoria-metrics
 
-resources: []
-#- ../../base 
-#- vmagent.yaml
+resources: 
+- ../../base 
+- vmagent.yaml

@@ -3,8 +3,6 @@ kind: VMAgent
 metadata:
   name: dmz
 spec:
-#  image:
-#    tag: "v1.93.3"
   selectAllByDefault: true
   replicaCount: 1
   externalLabels:
