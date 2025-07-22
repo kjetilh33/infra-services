@@ -3,11 +3,11 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: argoproj-https-creds-github-cognitedata
+  name: argoproj-https-creds-github-repo
   namespace: argocd
   labels:
     argocd.argoproj.io/secret-type: repo-creds
 stringData:
-  url: https://github.com/cognitedata
+  url: https://github.com/repo
   password: insert-your-github-token-here
   username: any-username-will-do
