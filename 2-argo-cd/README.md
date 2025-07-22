@@ -10,7 +10,7 @@ Running `Argo CD` and the full development services requires 4 - 8 GB RAM and 2 
 
 Argo CD is installed into your K8s cluster via a single command and a few simple configuration steps. We will install Argo CD into the namespace `argocd`.
 ```console
-$ kubectl apply -k . 
+$ kubectl apply -k . --server-side --force-conflicts
 ```
 This command will read the file `kustomization.yaml` and apply the specification/install.
 
@@ -20,7 +20,7 @@ This command will read the file `kustomization.yaml` and apply the specification
 > ```
 > In this case, just re-run:
 > ```console
-> $ kubectl apply -k .
+> $ kubectl apply -k . --server-side --force-conflicts
 > ```
 
 Depending on your network bandwidth, the installation may take some time to download all the required artifacts. You can check the status via 
@@ -103,6 +103,6 @@ If you want ArgoCD to read private GitHub repositories (which is the default for
 - Generate a personal access token. Go to your settings in [GitHub --> settings --> developer settings --> personal access tokens](https://github.com/settings/tokens), and generate a new token. Remember to add `SSO` settings for the token.
 - Add this token as the `password` in the `argocd-repo-creds.yaml` and apply it to the `argocd` namespace.
 ```console
-$ kubectl -n argocd apply -f ./argocd-repo-creds.yaml
+$ kubectl -n argocd apply -f ./argocd-repo-creds.yaml --server-side --force-conflicts
 ```
  Now you can point ArgoCD to private repos to read deployment manifests and perform continuous deployment to your local kubernetes.
