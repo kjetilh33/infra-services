@@ -6,7 +6,7 @@ namespace: argo
 resources:
 - argo.namespace.yaml
 - argo-wf-server-ui.mapping.yaml 
-- https://github.com/argoproj/argo-workflows/releases/download/v3.6.10/install.yaml
+- https://github.com/argoproj/argo-workflows/releases/download/v3.7.1/install.yaml
 # - minio-storage-class.yaml 
 
 patches:
