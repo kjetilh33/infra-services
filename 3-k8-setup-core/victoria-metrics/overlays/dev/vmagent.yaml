@@ -3,9 +3,9 @@ kind: VMAgent
 metadata:
   name: dev
 spec:
-#  image:
-#    tag: "v1.93.3"
   selectAllByDefault: true
   replicaCount: 1
+  externalLabels:
+    clusterId: "dev"
   remoteWrite:
     - url: "http://vmsingle-dev.victoria-metrics:8429/api/v1/write"
