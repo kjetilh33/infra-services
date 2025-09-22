@@ -1,0 +1,10 @@
+apiVersion: operator.victoriametrics.com/v1
+kind: VLSingle
+metadata:
+  name: dev
+spec:
+  retentionPeriod: "12d"
+  storage:
+    resources:
+      requests:
+        storage: 20Gi
