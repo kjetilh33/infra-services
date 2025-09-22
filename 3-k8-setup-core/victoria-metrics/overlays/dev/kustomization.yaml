@@ -8,3 +8,4 @@ resources:
 - vmsingle.yaml
 - vmagent.yaml
 - vmsingle.mapping.yaml
+- vlsingle.yaml
