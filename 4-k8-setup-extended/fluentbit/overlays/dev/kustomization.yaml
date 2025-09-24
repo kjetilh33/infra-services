@@ -9,8 +9,8 @@ helmChartInflationGenerator:
   releaseNamespace: fluent-bit
   releaseName: fluent-bit
   values: values.yaml
-  extraArgs:
-  - --skip-crds
+  #extraArgs:
+  #- arg1
 
 resources:
 - fluent-bit.namespace.yaml 
