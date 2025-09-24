@@ -2,13 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: fluent-bit
 
-helmChartInflationGenerator:
-- chartName: fluent
-  chartRepoUrl: https://fluent.github.io/helm-charts
-  #chartVersion: v0.5.2   # will use "latest" when not specified
-  releaseNamespace: fluent-bit
-  releaseName: fluent-bit
-  values: values.yaml
+#helmChartInflationGenerator:
+#- chartName: fluent
+#  chartRepoUrl: https://fluent.github.io/helm-charts
+#  #chartVersion: v0.5.2   # will use "latest" when not specified
+#  releaseNamespace: fluent-bit
+#  releaseName: fluent-bit
+#  values: values.yaml
   #extraArgs:
   #- arg1
 
