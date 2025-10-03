@@ -6,3 +6,4 @@ resources:
 - ../../base
 - kubernetes.clusterinput.yaml
 - kubernetes.clusterfilter.yaml
+- victoria-logs.clusteroutput.yaml

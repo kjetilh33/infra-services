@@ -1,0 +1,15 @@
+apiVersion: fluentbit.fluent.io/v1alpha2
+kind: ClusterOutput
+metadata:
+  name: victoriaLogs
+  labels:
+    fluentbit.fluent.io/enabled: "true"
+    fluentbit.fluent.io/component: logging
+spec:
+  match: kube.*
+  http:
+    host: "http://vlsingle-dev.victoria-metrics"
+    port: 9428
+    uri: "/insert/jsonline?_stream_fields=stream&_msg_field=log&_time_field=date"
+    format: json_lines
+    json_date_format: iso8601
