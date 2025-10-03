@@ -5,3 +5,4 @@ namespace: logging
 resources:
 - ../../base
 - kubernetes.clusterinput.yaml
+- kubernetes.clusterfilter.yaml
