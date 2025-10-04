@@ -7,10 +7,4 @@ resources:
 - https://github.com/fluent/fluent-operator/releases/download/v3.4.0/setup.yaml
 
 
-#https://github.com/fluent/fluent-operator/releases/download/v3.3.0/setup.yaml
-
 #https://raw.githubusercontent.com/fluent/fluent-operator/release-3.4/manifests/setup/setup.yaml
-
-# You can change the namespace in manifests/setup/kustomization.yaml in corresponding release branch
-# and then use command below to install to another namespace
-# kubectl kustomize manifests/setup/ | kubectl apply -f -
