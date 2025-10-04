@@ -4,6 +4,7 @@ namespace: logging
 
 resources:
 - ../../base
-- kubernetes.clusterinput.yaml
+# - kubelet.clusterinput.yaml
+- containers.clusterinput.yaml
 - kubernetes.clusterfilter.yaml
 - victoria-logs.clusteroutput.yaml
