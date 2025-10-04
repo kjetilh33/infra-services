@@ -13,7 +13,7 @@ spec:
     # excludePath: /var/log/containers/utils_default_utils-*.log
     parser: cri 
     refreshIntervalSeconds: 10
-    memBufLimit: 5MB
+    memBufLimit: 20MB
     skipLongLines: true
     db: /fluent-bit/tail/pos.db
     dbSync: Normal
