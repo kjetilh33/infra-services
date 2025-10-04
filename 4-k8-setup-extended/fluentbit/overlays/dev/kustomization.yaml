@@ -9,7 +9,7 @@ resources:
 - kubernetes.clusterfilter.yaml
 - victoria-logs.clusteroutput.yaml
 - fluent-bit-config.clusterfluentbitconfig.yaml
-- fluent-bit.fluentbit.yaml
+# - fluent-bit.fluentbit.yaml
 
 images:
   - name: ghcr.io/fluent/fluent-operator/fluent-bit
