@@ -8,3 +8,4 @@ resources:
 - containers.clusterinput.yaml
 - kubernetes.clusterfilter.yaml
 - victoria-logs.clusteroutput.yaml
+- logging-config.clusterfluentbitconfig.yaml
