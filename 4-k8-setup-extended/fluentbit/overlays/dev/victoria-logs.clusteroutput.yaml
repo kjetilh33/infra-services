@@ -10,6 +10,6 @@ spec:
   http:
     host: "vlsingle-dev.victoria-metrics"
     port: 9428
-    uri: "/insert/jsonline?_stream_fields=kubernetes.namespace_name,kubernetes.pod_name,kubernetes.container_name&_msg_field=message&_time_field=date"
+    uri: "/insert/jsonline?_stream_fields=kubernetes.cluster_name,kubernetes.namespace_name,kubernetes.pod_name,kubernetes.container_name&_msg_field=message&_time_field=date"
     format: json_lines
     jsonDateFormat: iso8601
