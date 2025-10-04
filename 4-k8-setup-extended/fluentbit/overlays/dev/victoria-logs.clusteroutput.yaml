@@ -10,6 +10,6 @@ spec:
   http:
     host: "vlsingle-dev.victoria-metrics"
     port: 9428
-    uri: "/insert/jsonline?_stream_fields=stream&_msg_field=log&_time_field=date"
+    uri: "/insert/jsonline?_stream_fields=stream&_msg_field=log&_time_field=date&debug=1"
     format: json_lines
     jsonDateFormat: iso8601
