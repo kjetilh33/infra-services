@@ -25,7 +25,7 @@ spec:
       - remove: kubernetes_host
       - remove: kubernetes_container_hash
       - add: 
-        kubernetes_cluster_name: dmz
+            kubernetes_cluster_name: dmz
   - nest:
       operation: nest
       wildcard:
