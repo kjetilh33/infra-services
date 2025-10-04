@@ -9,7 +9,7 @@ spec:
   match: kube.*
   http:
     host: "victoria-logs.kinnovatio.local"
-    port: 9428
-    uri: "/insert/jsonline?_stream_fields=kubernetes.namespace_name,kubernetes.pod_name,kubernetes.container_name&_msg_field=message&_time_field=date"
+    port: 443
+    uri: "/insert/jsonline?_stream_fields=kubernetes.namespace_name,kubernetes.pod_name,kubernetes.container_name&_msg_field=message&_time_field=date&debug=1"
     format: json_lines
     jsonDateFormat: iso8601
