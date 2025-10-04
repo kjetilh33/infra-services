@@ -8,4 +8,8 @@ resources:
 - containers.clusterinput.yaml
 - kubernetes.clusterfilter.yaml
 - victoria-logs.clusteroutput.yaml
-- logging-config.clusterfluentbitconfig.yaml
+- fluent-bit-config.clusterfluentbitconfig.yaml
+
+images:
+  - name: ghcr.io/fluent/fluent-operator/fluent-bit
+    newTag: 4.1.0
