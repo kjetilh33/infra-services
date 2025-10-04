@@ -1,0 +1,15 @@
+apiVersion: fluentbit.fluent.io/v1alpha2
+kind: ClusterOutput
+metadata:
+  name: victoria-logs
+  labels:
+    fluentbit.fluent.io/enabled: "true"
+    fluentbit.fluent.io/component: logging
+spec:
+  match: kube.*
+  http:
+    host: "victoria-logs.kinnovatio.local"
+    port: 9428
+    uri: "/insert/jsonline?_stream_fields=kubernetes.namespace_name,kubernetes.pod_name,kubernetes.container_name&_msg_field=message&_time_field=date"
+    format: json_lines
+    jsonDateFormat: iso8601
