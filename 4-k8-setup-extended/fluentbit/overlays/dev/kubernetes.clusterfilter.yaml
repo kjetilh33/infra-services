@@ -25,8 +25,7 @@ spec:
       - remove: kubernetes_host
       - remove: kubernetes_container_hash
       - add: 
-        - key: kubernetes_cluster_name
-          value: dev
+        kubernetes_cluster_name: dev
   - nest:
       operation: nest
       wildcard:
