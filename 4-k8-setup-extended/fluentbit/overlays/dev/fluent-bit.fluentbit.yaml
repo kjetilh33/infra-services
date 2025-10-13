@@ -11,5 +11,6 @@ spec:
     hostPath:
       path: /var/lib/fluent-bit/
   fluentBitConfigName: fluent-bit-config
+  logLevel: warn
   tolerations:
     - operator: Exists
