@@ -13,4 +13,4 @@ resources:
 
 images:
   - name: ghcr.io/fluent/fluent-operator/fluent-bit
-    newTag: v4.1.1
+    newTag: v4.2.0
