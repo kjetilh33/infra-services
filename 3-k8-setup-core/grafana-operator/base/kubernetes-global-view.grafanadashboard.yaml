@@ -10,6 +10,6 @@ spec:
       dashboards: "grafana"
   datasources: 
     - datasourceName: Prometheus
-      inputName: "PBFA97CFB590B2093"
+      inputName: "416f62c5-82b5-4a83-9fd9-2cbe5af63065"
   grafanaCom:
     id: 15757 
