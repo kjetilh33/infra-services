@@ -8,5 +8,8 @@ spec:
   instanceSelector:
     matchLabels:
       dashboards: "grafana"
+  datasources: 
+    - datasourceName: Prometheus
+      inputName: "PBFA97CFB590B2093"
   grafanaCom:
     id: 15757 
