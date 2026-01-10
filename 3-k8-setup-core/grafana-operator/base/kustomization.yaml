@@ -15,6 +15,7 @@ resources:
 - kubernetes.grafanadashboard.yaml
 - kubernetes-global-view.grafanadashboard.yaml
 - kubernetes-cluster-overview.grafanadashboard.yaml
+- argo-cd.grafanadashboard.yaml
 
 images:
   - name: ghcr.io/grafana-operator/grafana-operator
