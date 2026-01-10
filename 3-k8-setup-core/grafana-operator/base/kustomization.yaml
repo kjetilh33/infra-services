@@ -18,6 +18,6 @@ resources:
 
 images:
   - name: ghcr.io/grafana-operator/grafana-operator
-    newTag: v5.19.4
+    newTag: v5.21.4
   - name: grafana/grafana-oss
     newTag: "12.3.1"
