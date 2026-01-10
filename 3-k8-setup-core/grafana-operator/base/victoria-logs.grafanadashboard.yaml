@@ -8,5 +8,6 @@ spec:
   instanceSelector:
     matchLabels:
       dashboards: "grafana"
+  folder: "Victoria Metrics"
   grafanaCom:
     id: 22084 
