@@ -1,0 +1,39 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: executor
+rules:
+# argo apis
+  - apiGroups:
+      - argoproj.io
+    resources:
+      - eventsources
+      - sensors
+      - workflows
+      - workfloweventbindings
+      - workflowtemplates
+      - clusterworkflowtemplates
+      - cronworkflows
+      - workflowtaskresults
+    verbs:
+      - create
+      - patch
+      - get
+      - list
+      - watch
+      - delete
+  # k8s standard APIs
+  - apiGroups:
+      - ""
+    resources:
+      - events
+      - configmaps
+      - pods
+      - pods/log
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - delete
