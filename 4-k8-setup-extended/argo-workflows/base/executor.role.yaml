@@ -7,13 +7,6 @@ rules:
   - apiGroups:
       - argoproj.io
     resources:
-      - eventsources
-      - sensors
-      - workflows
-      - workfloweventbindings
-      - workflowtemplates
-      - clusterworkflowtemplates
-      - cronworkflows
       - workflowtaskresults
     verbs:
       - create
@@ -26,14 +19,8 @@ rules:
   - apiGroups:
       - ""
     resources:
-      - events
       - configmaps
-      - pods
-      - pods/log
     verbs:
       - get
       - list
       - watch
-      - create
-      - update
-      - delete
