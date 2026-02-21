@@ -18,7 +18,7 @@ patches:
     version: v1
     kind: Deployment
     name: argo-server
-- path: workflow-controller-configmap.yaml
+- path: workflow-controller-configmap.configmap.yaml
 
 
 
