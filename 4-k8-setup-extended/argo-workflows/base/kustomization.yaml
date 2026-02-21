@@ -19,11 +19,12 @@ patches:
     kind: Deployment
     name: argo-server
 
-#configMapGenerator:
-#  - name: workflow-controller-configmap
-#    behavior: merge
-#    files:
-#      - config=workflow-controller-config.yaml
+configMapGenerator:
+  - name: workflow-controller-configmap
+    namespace: argo
+    behavior: merge
+    files:
+      - config=workflow-controller-config.yaml
 
 generatorOptions:
   disableNameSuffixHash: true      
