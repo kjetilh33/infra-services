@@ -7,8 +7,9 @@ resources:
 - argo.namespace.yaml
 - argo-wf-server-ui.mapping.yaml 
 - https://github.com/argoproj/argo-workflows/releases/download/v4.0.1/install.yaml
-- executor.role.yaml
-- executor.rolebinding.yaml
+- workflow-executor.serviceaccount.yaml
+- executor.cluster-role.yaml
+- executor.cluster-rolebinding.yaml
 # - minio-storage-class.yaml 
 
 patches:

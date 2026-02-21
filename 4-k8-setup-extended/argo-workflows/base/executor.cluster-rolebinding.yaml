@@ -1,13 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: executor-to-workflow-defaul
-  namespace: argo
+  name: executor-to-workflow-default
 subjects:
 - kind: ServiceAccount
-  name: default
+  name: clusterWorkflowExecutor
   namespace: argo
 roleRef:
-  kind: Role
-  name: executor
+  kind: ClusterRole
+  name: workflowClusterExecutor
   apiGroup: rbac.authorization.k8s.io
