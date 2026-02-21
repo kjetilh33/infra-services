@@ -1,0 +1,21 @@
+# Parallelism limits the max total parallel workflows that can execute at the same time
+# Workflows that are executing but restricted from running more nodes due to other mechanisms will still count toward parallelism limits.
+parallelism: "10"
+
+# Whether or not to emit events on workflow status changes. These can take a up a lot of space in
+# k8s (typically etcd).
+# This config item allows you to disable this.
+# (since v3.6)
+workflowEvents:
+  enabled: false
+
+workflowDefaults:
+  metadata:
+    annotations: 
+      argo: workflows
+  spec:
+    ttlStrategy:
+      secondsAfterSuccess: 3600
+    parallelism: 3
+    serviceAccountName: cluster-workflow-executor
+

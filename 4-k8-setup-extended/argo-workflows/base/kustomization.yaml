@@ -19,3 +19,11 @@ patches:
     version: v1
     kind: Deployment
     name: argo-server
+
+configMapGenerator:
+  - name: workflow-controller-configmap
+    files:
+      - config = workflow-controller-config.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true      
