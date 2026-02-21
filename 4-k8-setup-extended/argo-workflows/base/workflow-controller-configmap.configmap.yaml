@@ -1,0 +1,20 @@
+# overlays/production/patch.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: workflow-controller-configmap
+data:
+  parallelism: "10"
+  workflowEvents: |
+    enabled: "false"
+  workflowDefaults: |
+    metadata:
+      annotations: 
+        argo: workflows
+    spec:
+      ttlStrategy:
+        secondsAfterSuccess: "3600"
+      parallelism: "3"
+      serviceAccountName: cluster-workflow-executor
+
+  
