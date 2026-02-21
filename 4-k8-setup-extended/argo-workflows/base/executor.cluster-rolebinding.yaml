@@ -4,9 +4,9 @@ metadata:
   name: executor-to-workflow-default
 subjects:
 - kind: ServiceAccount
-  name: clusterWorkflowExecutor
+  name: cluster-workflow-executor
   namespace: argo
 roleRef:
   kind: ClusterRole
-  name: workflowClusterExecutor
+  name: workflow-cluster-executor
   apiGroup: rbac.authorization.k8s.io
