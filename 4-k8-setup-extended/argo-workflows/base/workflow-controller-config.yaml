@@ -15,7 +15,7 @@ workflowDefaults:
       argo: workflows
   spec:
     ttlStrategy:
-      secondsAfterSuccess: 3600
-    parallelism: 3
+      secondsAfterSuccess: "3600"
+    parallelism: "3"
     serviceAccountName: cluster-workflow-executor
 
