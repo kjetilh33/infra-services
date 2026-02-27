@@ -4,7 +4,29 @@ kind: ConfigMap
 metadata:
   name: argocd-cmd-params-cm
 data:
+  ## Controller Properties
+  # Enables the server side diff feature at the application controller level.
+  # Diff calculation will be done by running a server side apply dryrun (when
+  # diff cache is unavailable).
+  controller.diff.server.side: "true"
+
+  # Set the logging level. One of: debug|info|warn|error (default "info")
+  controller.log.level: "warn"
+
   ## Server properties
   # Run server without TLS
   server.insecure: "true"
-  controller.diff.server.side: "true"
+  # Set the logging level. One of: debug|info|warn|error (default "info")
+  server.log.level: "info"
+
+  ## Repo-server properties
+  # Set the logging level. One of: debug|info|warn|error (default "info")
+  reposerver.log.level: "warn"
+
+  ## ApplicationSet Controller Properties
+  # Set the logging level. One of: debug|info|warn|error (default "info")
+  applicationsetcontroller.log.level: "warn"
+
+  ## Argo CD Notifications Controller Properties
+  # Set the logging level. One of: debug|info|warn|error (default "info")
+  notificationscontroller.log.level: "warn"
