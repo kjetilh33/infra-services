@@ -11,6 +11,9 @@ resources:
 - pushgateway.vmservicescrape.yaml
 - ca-node-scrape.vmnodescrape.yaml
 - node-scrape.vmnodescrape.yaml
+- pods.vmscrapeconfig.yaml
+- kubernetes-api.vmscrapeconfig.yaml
+
 
 images:
 - name: manager

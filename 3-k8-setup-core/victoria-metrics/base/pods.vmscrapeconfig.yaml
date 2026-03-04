@@ -1,0 +1,75 @@
+# vmscrapeconfig pods
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMScrapeConfig
+metadata:
+  name: kubernetes-pods
+spec:
+  kubernetesSDConfigs:
+    - role: pod
+  
+  relabelConfigs:
+    # Skip init containers
+    - action: drop
+      sourceLabels: [__meta_kubernetes_pod_container_init]
+      regex: "true"
+    
+    # Ensure port annotation matches container port
+    - action: keep_if_equal
+      sourceLabels:
+        - __meta_kubernetes_pod_annotation_prometheus_io_port
+        - __meta_kubernetes_pod_container_port_number
+    
+    # Only pods with prometheus.io/scrape="true"
+    - sourceLabels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+      action: keep
+      regex: "true"
+    
+    # Exclude pods marked as "slow"
+    - sourceLabels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape_slow]
+      action: drop
+      regex: "true"
+    
+    # Scheme override
+    - sourceLabels: [__meta_kubernetes_pod_annotation_prometheus_io_scheme]
+      action: replace
+      targetLabel: __scheme__
+      regex: "(https?)"
+    
+    # Path override
+    - sourceLabels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+      action: replace
+      targetLabel: __metrics_path__
+      regex: "(.+)"
+    
+    # Address override using prometheus.io/port
+    - sourceLabels:
+        - __address__
+        - __meta_kubernetes_pod_annotation_prometheus_io_port
+      action: replace
+      targetLabel: __address__
+      regex: "([^:]+)(?::\\d+)?;(\\d+)"
+      replacement: "$1:$2"
+    
+    # Copy pod labels
+    - action: labelmap
+      regex: __meta_kubernetes_pod_label_(.+)
+    
+    # Use kubernetes_namespace, kubernetes_pod_name, kubernetes_node labels
+    - sourceLabels: [__meta_kubernetes_namespace]
+      action: replace
+      targetLabel: kubernetes_namespace
+    - sourceLabels: [__meta_kubernetes_pod_name]
+      action: replace
+      targetLabel: kubernetes_pod_name
+    - sourceLabels: [__meta_kubernetes_pod_node_name]
+      action: replace
+      targetLabel: kubernetes_node
+    
+    # Drop non-running pods
+    - sourceLabels: [__meta_kubernetes_pod_phase]
+      action: drop
+      regex: "Pending|Succeeded|Failed|Completed"
+    
+    # Override job label
+    - targetLabel: job
+      replacement: "kubernetes-pods"

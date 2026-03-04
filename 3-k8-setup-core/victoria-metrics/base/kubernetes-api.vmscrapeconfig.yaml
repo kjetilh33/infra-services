@@ -1,0 +1,27 @@
+# vmscrapeconfig apiservers
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMScrapeConfig
+metadata:
+  name: kubernetes-apiservers
+spec:
+  kubernetesSDConfigs:
+    - role: endpoints
+  
+  scheme: https
+  tlsConfig:
+    caFile: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    insecureSkipVerify: true
+  bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+  
+  relabelConfigs:
+    # Keep only the kubernetes service on https port
+    - sourceLabels:
+        - __meta_kubernetes_namespace
+        - __meta_kubernetes_service_name
+        - __meta_kubernetes_endpoint_port_name
+      action: keep
+      regex: "default;kubernetes;https"
+    
+    # relabel metrics to work with Grafana dashboard
+    - targetLabel: job
+      replacement: "kubernetes-apiservers"
