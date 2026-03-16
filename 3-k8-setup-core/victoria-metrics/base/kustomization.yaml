@@ -18,6 +18,6 @@ resources:
 images:
 - name: manager
   newName: victoriametrics/operator
-  newTag: v0.68.2
+  newTag: v0.68.3
 - name: prom/pushgateway
   newTag: v1.11.2
