@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: envoy-gateway-system
+
+helmChartInflationGenerator:
+- chartName: gateway-helm-crd
+  chartRepoUrl: https://docker.io/envoyproxy
+  chartVersion: v1.7.1   # will use "latest" when not specified
+  releaseNamespace: envoy-gateway-system
+  releaseName: envoy-gateway-system
+  values: values-crd.yaml
+  extraArgs:
+  - --skip-crds
+- chartName: gateway-helm
+  chartRepoUrl: https://docker.io/envoyproxy
+  chartVersion: v1.7.1   # will use "latest" when not specified
+  releaseNamespace: envoy-gateway-system
+  releaseName: envoy-gateway-system
+  values: values.yaml
+  extraArgs:
+  - --skip-crds
+
+resources:
+- envoy-gateway.namespace.yaml
