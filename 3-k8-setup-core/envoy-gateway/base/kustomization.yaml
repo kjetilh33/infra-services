@@ -6,13 +6,13 @@ helmCharts:
 - name: gateway-helm-crd
   repo: https://docker.io/envoyproxy
   version: v1.7.1   # will use "latest" when not specified
-  values: values-crd.yaml
+  valuesFile: values-crd.yaml
   includeCRDs: true
 - name: gateway-helm
   repo: https://docker.io/envoyproxy
   version: v1.7.1   # will use "latest" when not specified
   namespace: envoy-gateway-system
-  values: values-gateway.yaml
+  valuesFile: values-gateway.yaml
   includeCRDs: false
 
 resources:
