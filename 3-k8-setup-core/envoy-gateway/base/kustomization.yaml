@@ -4,12 +4,12 @@ namespace: envoy-gateway-system
 
 helmCharts:
 - name: gateway-helm-crd
-  repo: https://docker.io/envoyproxy
+  repo: oci://docker.io/envoyproxy
   version: v1.7.1   # will use "latest" when not specified
   valuesFile: values-crd.yaml
   includeCRDs: true
 - name: gateway-helm
-  repo: https://docker.io/envoyproxy
+  repo: oci://docker.io/envoyproxy
   version: v1.7.1   # will use "latest" when not specified
   namespace: envoy-gateway-system
   valuesFile: values-gateway.yaml
