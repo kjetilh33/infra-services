@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: envoy-gateway-system
 
 helmCharts:
-- name: gateway-helm-crd
+- name: gateway-crds-helm
   repo: oci://docker.io/envoyproxy
   version: v1.7.1   # will use "latest" when not specified
   valuesFile: values-crd.yaml
