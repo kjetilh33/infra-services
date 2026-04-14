@@ -1,0 +1,17 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: echoserver-fallback
+spec:
+  parentRefs:
+    - name: envoy-gateway
+      namespace: envoy-gateway-system
+# Omitting "hostnames" makes it match all hostnames
+  rules:
+    - matches:
+        - path:
+            value: "/"
+      backendRefs:
+        - name: echoserver
+          kind: service
+          port: 8080 # Envoy will talk to your app over port 8080 (HTTP)
