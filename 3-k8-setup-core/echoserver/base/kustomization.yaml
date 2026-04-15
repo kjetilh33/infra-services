@@ -6,4 +6,6 @@ resources:
 - echoserver.deployment.yaml 
 - echoserver.service.yaml
 - echoserver.mapping.yaml 
-- echoserver-fallback.mapping.yaml 
+- echoserver-fallback.mapping.yaml
+- echoserver.httproute.yaml 
+- echoserver-fallback.httproute.yaml
