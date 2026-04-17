@@ -21,4 +21,4 @@ images:
   - name: ghcr.io/grafana-operator/grafana-operator
     newTag: v5.21.4
   - name: grafana/grafana-oss
-    newTag: "13.0.0"
+    newTag: "13.0.1"
