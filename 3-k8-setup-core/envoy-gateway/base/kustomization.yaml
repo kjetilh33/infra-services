@@ -10,7 +10,7 @@ helmCharts:
   includeCRDs: true
 - name: gateway-helm
   repo: oci://docker.io/envoyproxy
-  version: v1.7.1   # will use "latest" when not specified
+  version: 1.7.2   # will use "latest" when not specified
   namespace: envoy-gateway-system
   valuesFile: values-gateway.yaml
   includeCRDs: false
