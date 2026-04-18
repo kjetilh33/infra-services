@@ -7,5 +7,5 @@ resources:
 - ../../base 
 - vmsingle.yaml
 - vmagent.yaml
-- vmsingle.mapping.yaml
+# - vmsingle.mapping.yaml
 - vlsingle.yaml

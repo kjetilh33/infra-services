@@ -6,7 +6,7 @@ namespace: grafana
 resources:
 - github.com/grafana-operator/grafana-operator/deploy/kustomize/overlays/cluster_scoped
 - grafana-main.grafana.yaml
-- grafana-main-mapping.yaml
+#- grafana-main.httproute.yaml
 - victoria-metrics.grafanadatasource.yaml
 - victoria-metrics.grafanadashboard.yaml 
 - victoria-logs.grafanadashboard.yaml

@@ -1,8 +1,0 @@
-apiVersion: getambassador.io/v3alpha1
-kind: Mapping
-metadata:
-  name: echoserver
-spec:
-  hostname: 'echoserver.localhost'
-  prefix: /
-  service: http://echoserver.echoserver:8080
