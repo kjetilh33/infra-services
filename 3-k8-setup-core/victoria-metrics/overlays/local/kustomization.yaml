@@ -8,3 +8,4 @@ resources:
 - vmsingle.yaml
 - vmagent.yaml
 #- vmsingle-local.httproute.yaml
+#- pushgateway-localhost.httproute.yaml
