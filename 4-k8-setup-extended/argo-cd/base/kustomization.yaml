@@ -1,8 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 namespace: argocd
+
 resources: []
-#- argocd-ui.httproute.yaml 
-# Disable CLI mapping as it conflicts with the server UI mapping
-# - argocd-server-cli.mapping.yaml 
+ 
