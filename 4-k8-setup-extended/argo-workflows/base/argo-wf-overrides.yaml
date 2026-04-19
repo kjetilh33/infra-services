@@ -4,4 +4,3 @@
   value:
   - "server"
   - "--auth-mode=server"
-  - "--secure=false"
