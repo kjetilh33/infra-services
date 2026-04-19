@@ -1,0 +1,18 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: vmsingle-localhost
+spec:
+  parentRefs:
+    - name: envoy-gateway
+      namespace: envoy-gateway-system
+  hostnames:
+    - "victoria-metrics.localhost"
+  rules:
+    - matches:
+        - path:
+            value: "/"
+      backendRefs:
+        - name: vmsingle-vmsingle
+          kind: service
+          port: 8429 # Envoy will talk to your app over port 8429 (HTTP)
