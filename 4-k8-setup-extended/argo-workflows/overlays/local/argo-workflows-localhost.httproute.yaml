@@ -14,5 +14,5 @@ spec:
             value: "/"
       backendRefs:
         - name: argo-server
-          kind: service
+          kind: Service
           port: 2746 # Envoy will talk to your app over port 2746 (HTTP)

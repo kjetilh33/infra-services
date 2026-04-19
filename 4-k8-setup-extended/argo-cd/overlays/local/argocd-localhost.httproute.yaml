@@ -14,5 +14,5 @@ spec:
             value: "/"
       backendRefs:
         - name: argocd-server
-          kind: service
+          kind: Service
           port: 443 # Envoy will talk to your app over port 443 (HTTP)
