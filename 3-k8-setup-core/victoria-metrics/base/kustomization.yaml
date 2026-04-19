@@ -5,7 +5,7 @@ namespace: victoria-metrics
 
 resources:
 - github.com/VictoriaMetrics/operator/config/default?ref=v0.68.4
-#- pushgateway.httproute.yaml
+#- pushgateway-localhost.httproute.yaml
 - pushgateway.deployment.yaml
 - pushgateway.service.yaml
 - pushgateway.vmservicescrape.yaml
