@@ -14,5 +14,5 @@ spec:
             value: "/"
       backendRefs:
         - name: grafana-main-service
-          kind: service
+          kind: Service
           port: 3000 # Envoy will talk to your app over port 3000 (HTTP)

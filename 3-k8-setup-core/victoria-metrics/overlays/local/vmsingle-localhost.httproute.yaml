@@ -14,5 +14,5 @@ spec:
             value: "/"
       backendRefs:
         - name: vmsingle-vmsingle
-          kind: service
+          kind: Service
           port: 8429 # Envoy will talk to your app over port 8429 (HTTP)

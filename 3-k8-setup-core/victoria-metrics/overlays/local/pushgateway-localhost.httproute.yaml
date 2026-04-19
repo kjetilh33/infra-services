@@ -14,5 +14,5 @@ spec:
             value: "/"
       backendRefs:
         - name: prometheus-pushgateway
-          kind: service
+          kind: Service
           port: 9091 # Envoy will talk to your app over port 9091 (HTTP)

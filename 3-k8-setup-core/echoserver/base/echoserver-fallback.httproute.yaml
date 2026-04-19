@@ -13,5 +13,5 @@ spec:
             value: "/"
       backendRefs:
         - name: echoserver
-          kind: service
+          kind: Service
           port: 8080 # Envoy will talk to your app over port 8080 (HTTP)
