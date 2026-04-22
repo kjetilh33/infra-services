@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: operator
+spec:
+  template:
+    spec:
+      containers:
+      - name: manager
+        args: 
+          - '--leader-elect'
+          - '--health-probe-bind-address=:8081'
+          - '--metrics-bind-address=:8080'
+          - '--controller.disableReconcileFor PodMonitor,ServiceMonitor,PrometheusRule,Probe,ScrapeConfig'
