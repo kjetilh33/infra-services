@@ -1,0 +1,16 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: envoy-proxy-monitoring
+  labels:
+    app.kubernetes.io/name: grafana-main
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  folder: "Envoy"
+#  datasources: 
+#    - datasourceName: Prometheus
+#      inputName: "416f62c5-82b5-4a83-9fd9-2cbe5af63065"
+  grafanaCom:
+    id: 23239 
