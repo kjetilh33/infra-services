@@ -20,4 +20,4 @@ images:
   newName: victoriametrics/operator
   newTag: v0.70.1
 - name: prom/pushgateway
-  newTag: v1.11.2
+  newTag: v1.11.3
