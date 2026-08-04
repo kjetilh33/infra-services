@@ -18,6 +18,6 @@ patches:
 images:
 - name: manager
   newName: victoriametrics/operator
-  newTag: v0.74.0
+  newTag: v0.74.1
 - name: prom/pushgateway
   newTag: v1.11.3
