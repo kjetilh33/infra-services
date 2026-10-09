@@ -20,13 +20,6 @@ spec:
               requests:
                 cpu: 100m
                 memory: 500Mi
-  persistentVolumeClaim:
-    spec:
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 5Gi
   service:
     spec:
       type: ClusterIP
