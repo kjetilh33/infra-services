@@ -3,6 +3,9 @@ kind: VMAgent
 metadata:
   name: dmz
 spec:
+  securityContext:
+    appArmorProfile:
+      type: Unconfined # Or RuntimeDefault
   selectAllByDefault: true
   replicaCount: 1
   externalLabels:
