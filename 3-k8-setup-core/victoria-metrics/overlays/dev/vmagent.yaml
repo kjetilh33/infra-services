@@ -3,6 +3,9 @@ kind: VMAgent
 metadata:
   name: dev
 spec:
+  securityContext:
+    appArmorProfile:
+      type: Unconfined # Or RuntimeDefault
   selectAllByDefault: true
   replicaCount: 1
   externalLabels:
